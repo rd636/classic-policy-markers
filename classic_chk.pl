@@ -35,10 +35,19 @@
 # or distribution of the sample code.
 
 use v5.14.2;
-use POSIX;
 use Getopt::Std;
-use charnames ':loose'
-my $warnings = 0;
+use charnames ':loose';
+use strict;
+
+my (
+    $warnings,
+    @CLASSIC_EXPR,
+    %options,
+    $file_in,
+    $file_out,
+    @nsconf,
+    $warn,
+) = 0;
 
 # load classic expressions					
 foreach (<DATA>) {								
@@ -72,7 +81,7 @@ print "$file_in is ", scalar(@nsconf), " lines. \n";
 open(OUTFILE,'>', $file_out) or die "Can't open outfile $file_out: $!\n";
 
 # loop throught config
-for ($x=0; $x < scalar(@nsconf); $x++) {
+for (my $x=0; $x < scalar(@nsconf); $x++) {
 	$warn = 0;
 	if($nsconf[$x] =~/(sc|dos|pq)policy/i) {	#Check for deprecated commands
 		$warn = 1;
