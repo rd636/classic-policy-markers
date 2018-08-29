@@ -35,6 +35,7 @@
 # or distribution of the sample code.
 
 use v5.14.2;
+use POSIX;
 use Getopt::Std;
 use charnames ':loose'
 my $warnings = 0;
