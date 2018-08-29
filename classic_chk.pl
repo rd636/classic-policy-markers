@@ -33,8 +33,10 @@
 # attribution, and not that of Citrix. You agree to indemnify and defend 
 # Citrix against any and all claims arising from your use, modification 
 # or distribution of the sample code.
-		
+
+use v5.14.2;
 use Getopt::Std;
+use charnames ':loose'
 my $warnings = 0;
 
 # load classic expressions					
