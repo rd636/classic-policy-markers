@@ -74,7 +74,6 @@ if (defined $ARGV[1]) {
 
 # open input file
 open(INFILE, '<', $file_in) or die "Can't open infile $file_in: $!\n";	
-binmode(INFILE, ":utf8"); 
 @nsconf = <INFILE>;
 close INFILE;
 print "$file_in is ", scalar(@nsconf), " lines. \n";
