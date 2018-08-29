@@ -78,9 +78,8 @@ close INFILE;
 print "$file_in is ", scalar(@nsconf), " lines. \n";
 
 # open out file
-binmode OUTFILE, ":utf8"; 
-binmode(STDOUT, ":utf8");
 open(OUTFILE,'>', $file_out) or die "Can't open outfile $file_out: $!\n";
+binmode(OUTFILE, ":utf8"); 
 
 # loop throught config
 for (my $x=0; $x < scalar(@nsconf); $x++) {
