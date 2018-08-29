@@ -89,18 +89,18 @@ for (my $x=0; $x < scalar(@nsconf); $x++) {
 	if($nsconf[$x] =~/(sc|dos|pq)policy/i) {	#Check for deprecated commands
 		$warn = 1;
 	}
-	foreach (@CLASSIC_EXPR) {					#Check for deprecated expressions
+	foreach (@CLASSIC_EXPR) {			#Check for deprecated expressions
 		if ($nsconf[$x] =~ /(Policy|policy|rule).+[^-]$_/) { 
 			$warn = 1;
 		} 
 	}
-	if ($warn) {								#flag line with '>>>' when needed
+	if ($warn) {					#flag line with '>>>' when needed
 	   $warn = ">>>\N{SPACE}";					
 	   $warnings++;
 	} else {
-	   $warn = "\N{SPACE}"x 4;					#leave space at begining of line
+	   $warn = "\N{SPACE}"x 4;			#leave space at begining of line
 	}
-	$warn .= $nsconf[$x];						#assemble the output line
+	$warn .= $nsconf[$x];				#assemble the output line
 	print OUTFILE $warn unless (length($warn) eq 4);
 }	
 print $file_out.' has ', $warnings, " classic configuration commands. \n";
