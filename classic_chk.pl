@@ -8,7 +8,7 @@
 # Use this output to identify the extent to which convesion to
 # advanced policies will be necessary.
 #      
-# COPYRIGHT
+# COPYRIGHT 
 # This sample code is provided to you as is with no representations, 
 # warranties or conditions of any kind. You may use, modify and 
 # distribute it at your own risk. CITRIX DISCLAIMS ALL WARRANTIES 
