@@ -1,6 +1,7 @@
 # classic-policy-markers
 Prefix configuration lines from a ns.conf text configuration file with flags to indicate where classic policies and deprecated commands exist.
-<code>
+
+```
 > shell
 # cd /nsconfig
 # curl -O https://raw.githubusercontent.com/rd636/classic-policy-markers/master/classic_chk.pl
@@ -13,4 +14,4 @@ ns.conf.audit.conf has 1 classic configuration commands.
 # nspepi -e ns_true
 "TRUE"
 #
-</code>
+```
