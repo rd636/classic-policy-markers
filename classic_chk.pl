@@ -71,13 +71,14 @@ if (defined $ARGV[1]) {
 }		
 
 
-# open input file				
+# open input file
 open(INFILE, '<', $file_in) or die "Can't open infile $file_in: $!\n";	
 @nsconf = <INFILE>;
 close INFILE;
 print "$file_in is ", scalar(@nsconf), " lines. \n";
 
 # open out file
+binmode OUTFILE, ":utf8"; 
 open(OUTFILE,'>', $file_out) or die "Can't open outfile $file_out: $!\n";
 
 # loop throught config
