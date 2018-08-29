@@ -54,7 +54,7 @@ $warnings = 0;
 # load classic expressions                    
 foreach (<DATA>) {                                
     chomp($_);
-    $_ =~ s/\x0d{0,1}\x0a\Z//s;
+    $_ =~ s/\x0d//s;
     push(@CLASSIC_EXPR, $_);
 }
 
