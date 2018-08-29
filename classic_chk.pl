@@ -47,7 +47,8 @@ my (
     $file_out,
     @nsconf,
     $warn,
-) = 0;
+);
+$warnings = 0;
 
 # load classic expressions					
 foreach (<DATA>) {								
