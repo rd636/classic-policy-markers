@@ -73,6 +73,7 @@ if (defined $ARGV[1]) {
 
 # open input file
 open(INFILE, '<', $file_in) or die "Can't open infile $file_in: $!\n";	
+binmode(INFILE, ":utf8"); 
 @nsconf = <INFILE>;
 close INFILE;
 print "$file_in is ", scalar(@nsconf), " lines. \n";
@@ -93,10 +94,10 @@ for (my $x=0; $x < scalar(@nsconf); $x++) {
 		} 
 	}
 	if ($warn) {								#flag line with '>>>' when needed
-	   $warn = ">>>\x{2013}";					
+	   $warn = ">>>\N{SPACE}";					
 	   $warnings++;
 	} else {
-	   $warn = "\x{2013}"x 4;					#leave space at begining of line
+	   $warn = "\N{SPACE}"x 4;					#leave space at begining of line
 	}
 	$warn .= $nsconf[$x];						#assemble the output line
 	print OUTFILE $warn unless (length($warn) eq 4);
