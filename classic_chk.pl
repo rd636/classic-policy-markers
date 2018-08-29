@@ -98,7 +98,7 @@ for (my $x=0; $x < scalar(@nsconf); $x++) {
 	   $warn = "\N{SPACE}"x 4;					#leave space at begining of line
 	}
 	$warn .= $nsconf[$x];						#assemble the output line
-	print OUTFILE $warn unless (length($warn) eq 4);
+	print OUTFILE $warn;
 }	
 print $file_out.' has ', $warnings, " classic configuration commands. \n";
 close OUTFILE;
