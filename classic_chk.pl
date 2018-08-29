@@ -36,7 +36,7 @@
 
 use v5.14.2;
 use Getopt::Std;
-use charnames ':loose';
+use charnames ':full';
 use strict;
 
 my (
