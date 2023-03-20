@@ -1,3 +1,10 @@
+
+# 131_bulk_config_check_wrapper.pl
+Tool for bulk use of config_check against a directory of ns.conf files.
+
+
+
+
 # classic-policy-markers
 Prefix configuration lines from a ns.conf text configuration file with flags to indicate where classic policies and deprecated commands exist.
 
